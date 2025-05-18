@@ -88,3 +88,39 @@
     text-align: center;
   }
 }
+
+/* View More Button Styles */
+.view-more-button {
+  background-color: $buttonColor; // from your _globalColor.scss
+  color: $lightBackground3;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.view-more-button:hover {
+  background-color: darken($buttonColor, 10%);
+  box-shadow: 0 0 8px lighten($buttonColor, 20%);
+}
+
+.view-more-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px lighten($buttonColor, 40%);
+}
+
+/* Dark mode for button */
+.dark-mode .view-more-button {
+  background-color: lighten($buttonColor, 15%);
+  color: $darkBackground1;
+
+  &:hover {
+    background-color: lighten($buttonColor, 5%);
+    box-shadow: 0 0 8px lighten($buttonColor, 35%);
+  }
+}
